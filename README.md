@@ -5,8 +5,8 @@ An easy to use python module that lets you gather user information from twitter
 `pip install twitce`
 
 ## Usage
-To gather statistics from a user, use the 'stats('username','statistic')' method. 
-It takes a username (string) as the first argument and a statistic as the second argument (string).
+To gather statistics from a user, use the `twitce.stats('username','statistic')` method. 
+It takes an username (string) as the first argument and a statistic as the second argument (string).
 
 Statistics: 'tweets', 'followers', 'following'
 
