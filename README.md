@@ -28,6 +28,7 @@ Enumeration: 'tweets' , 'followers' , 'following'
 `twitce.stats('realdonaldtrump','tweets')
    \\ Returns 41.414
 `
+
 To gather profile information from a user, use the `twitce.profile('username','enum')` method. 
 It takes an username (string) as the first argument and an enumeration as the second argument (string).
 
