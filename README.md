@@ -6,10 +6,10 @@ You can install Twitce with pip:
 `pip install twitce`
 
 ## Usage
-To gather statistics from a user, use the `twitce.stats('username','statistic')` method. 
-It takes an username (string) as the first argument and a statistic as the second argument (string).
+To gather statistics from a user, use the `twitce.stats('username','enum')` method. 
+It takes an username (string) as the first argument and an enumeration as the second argument (string).
 
-Statistics: 'tweets', 'followers', 'following'
+enumeration: 'tweets', 'followers', 'following'
 
 To get the amount of followers from a requested user:
 
@@ -23,6 +23,8 @@ To get the amount of tweets the requested user has posted:
 
 `twitce.stats('user','tweets')`
 
+Get the amount of tweets from realdonaldtrump 
+
 `twitce.stats('realdonaldtrump','tweets')
-    # Returns 41.414
+   \\ Returns 41.414
 `
