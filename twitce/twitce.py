@@ -29,10 +29,4 @@ def stats(user_name, stat):
             return f'User doesnt have any {req.split()[0]}'    
     except:
         return 'User cant be found'
-       
-# user = 'realdonaldtrump'    
-# followers = stats(user,'followers')
-# following = stats(user,'following')
-# tweets = stats(user,'tweets')
 
-# print(f'{user} has {followers} followers and {tweets} tweets. He follows {following} people ')

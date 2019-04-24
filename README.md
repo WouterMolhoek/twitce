@@ -1,4 +1,4 @@
-# Twitse 
+# Twitce 
 An easy to use python module that lets you gather user information from twitter
 
 ## Install
