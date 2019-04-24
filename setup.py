@@ -3,7 +3,7 @@ from distutils.core import setup
 setup(
   name = 'twitce',         
   packages = ['twitce'],   
-  version = '0.1',      
+  version = '0.21',      
   license='MIT',        
   description = 'Gather userinformation from twitter',   
   author = 'Wouter Molhoek',                   

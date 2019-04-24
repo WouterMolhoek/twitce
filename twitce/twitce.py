@@ -67,5 +67,4 @@ def profile(user_name, option):
 
     if profile_item == '': return 'None specified'    
     else: return profile_item    
-
-print(profile('Botv25dsfdsdsfsd','location'))    
+    

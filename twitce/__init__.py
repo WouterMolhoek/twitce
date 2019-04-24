@@ -1,2 +1,2 @@
-from twitce.twitce import stats
+from twitce.twitce import stats, profile
 
