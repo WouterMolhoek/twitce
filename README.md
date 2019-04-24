@@ -9,7 +9,7 @@ You can install Twitce with pip:
 To gather statistics from a user, use the `twitce.stats('username','enum')` method. 
 It takes an username (string) as the first argument and an enumeration as the second argument (string).
 
-enumeration: 'tweets', 'followers', 'following'
+Enumeration: 'tweets', 'followers', 'following'
 
 To get the amount of followers from a requested user:
 
