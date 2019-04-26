@@ -1,48 +1,65 @@
-# Twitce 
+# Twitce
+
 An easy to use python module that lets you gather user information from twitter
 
-## Install
-You can install Twitce with pip:
-`pip install twitce`
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Twitce.
+
+```bash
+pip install twitce
+```
 
 ## Usage
-To gather statistics from a user, use the `twitce.stats('username','enum')` method. 
-It takes an username (string) as the first argument and an enumeration as the second argument (string).
+To gather statistical information from a user, use the stats() method.
 
-Enumeration: 'tweets' , 'followers' , 'following'
+```python
+import twitce
 
-* To get the amount of followers from a requested user:
+twitce.stats('user','followers') # Returns the amount of followers // e.g 59871542
+twitce.stats('user','following') # Returns the amount of people the requested user is following // e.g 20
+twitce.stats('user','tweets') # Returns the amount of tweets // e.g 4
+```
 
-`twitce.stats('user','followers')`
+To gather profile information from a user, use the profile() method.
+```python
+import twitce
 
-* To get the amount of people who the requested user is following:
+twitce.profile('user','name') # Returns the name
+twitce.profile('user','screenname') # Returns screenname
+twitce.profile('user','bio') # Returns bio description
+twitce.profile('user','location') # Returns fixed location
+twitce.profile('user','url') # Returns the URL from a given website 
+twitce.profile('user','join') # Returns the date when the account was created 
+twitce.profile('user','birth') # Returns the birthdate
+```
 
-`twitce.stats('user','following')`
+## Error handling
+Twitce comes with simple error handling. Both methods, profile() and stats() should be provided with 2 arguments:
 
-* To get the amount of tweets the requested user has posted:
+```python
+twitce.profile('','bio') # Returns 'First argument must be provided'
+twitce.stats('user','') # Returns 'Second argument must be provided' 
+```
+When a enumeration is not recognized: 
+```python
+twitce.stats('user','tweetssss') # Returns 'Does not recognize "tweetssss" as one of the enumerations'
+```
+When the requested user doesn't have any tweets (or another enum):
+```python
+twitce.stats('user','tweets') # Returns 'User doesnt have any tweets' 
+```
+If for example the birthdate is not specified:
+```python
+twitce.profile('user','birth') # Returns 'None specified' 
+```
+When the requested user does not exist:
+```python
+twitce.profile('userdoesnotexist','birth') # Returns 'User does not exist' 
+```
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-`twitce.stats('user','tweets')`
 
-* Get the amount of tweets from realdonaldtrump 
-
-`twitce.stats('realdonaldtrump','tweets')
-   \\ Returns 41.414
-`
-
-To gather profile information from a user, use the `twitce.profile('username','enum')` method. 
-It takes an username (string) as the first argument and an enumeration as the second argument (string).
-
-Enumeration: 'name' , 'screenname' , 'bio' , 'location' , 'url' , 'join' , 'birth'
-
-* To get the name from the user:
-
-`twitce.profile('user','name')`
-
-* To get the screenname from the user:
-
-`twitce.profile('user','screenname')`
-
-* To get the bio from the user:
-
-`twitce.profile('user','bio')`
-
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
